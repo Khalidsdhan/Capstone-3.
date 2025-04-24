@@ -30,7 +30,7 @@ public class AuctionService {
         if(property==null){
             throw new ApiException("property");
         }
-
+        auctionDTO.setIsActive(true);
         Auction auction=new Auction(null,auctionDTO.getStartTime(),auctionDTO.getEndTime(),auctionDTO.getIsActive(),auctionDTO.getStartingBid(),auctionDTO.getStatus(),property,null);
         auctionRepository.save(auction);
     }
