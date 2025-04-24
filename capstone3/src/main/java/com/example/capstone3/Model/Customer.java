@@ -26,8 +26,10 @@ public class Customer {
     private String name;
 
     @Column(columnDefinition = "int not null")
-    @NotNull(message = "age must be not null")
+    @Min(18)
+    @NotNull(message = "age must be not empty")
     private Integer age;
+    
 
     @Email
     @Column(columnDefinition = "varchar(20) not null")
