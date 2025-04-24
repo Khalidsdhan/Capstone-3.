@@ -32,7 +32,7 @@ public class Customer {
     
 
     @Email
-    @Column(columnDefinition = "varchar(20) not null")
+    @Column(columnDefinition = "email varchar(55)  unique")
     @NotEmpty(message = "email must be not empty")
     private String email;
 
